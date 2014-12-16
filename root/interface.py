@@ -125,7 +125,7 @@ def getCameraCalibration(img, objp):
         cv2.putText(img, "d: show grid", (20, 130), font, 1, (37,201,11), 1)
         cv2.putText(img, "f: show lightsaber", (20, 170), font, 1, (37,201,11), 1)
         cv2.putText(img, "g: draw jail", (20, 210), font, 1, (37,201,11), 1)
-        cv2.putText(img, "h: show logo", (20, 240), font, 1, (37,201,11), 1)
+        cv2.putText(img, "h: show logo", (20, 250), font, 1, (37,201,11), 1)
         objpoints.append(objp)
         cv2.cornerSubPix(gray, corners, (5,5), (-1,-1), criteria)
         imgpoints.append(corners)
@@ -930,7 +930,7 @@ def search():
 
     Person_temp = [] 
     Person_details = []
-    Person_names = ['STEVE JOBS','sorry but is dead',164,99,'Steve Wozniak','64',90,163,'Mehdi Jazayeri','Who knows?',210]
+    Person_names = ['STEVE JOBS','Dead',164,99,'Steve Wozniak','64',90,163,'Mehdi Jazayeri','Who knows?',210]
     Person_names_print = []
 
 
@@ -966,7 +966,7 @@ def search():
         label2= '|'
 
 
-        instructions = "Some calculation will be done. Don't move. "
+        instructions = "Do not move. Calculating... "
         instructions2 = "___________________________________________"
         font = cv2.FONT_HERSHEY_SIMPLEX
         for i in range(0,800,18):
@@ -1222,9 +1222,9 @@ def search():
 
 
     def label3_inf():
-        who = "This Person Is"
+        who = "Subject:"
         who_2 = Person_names_print[0]
-        age = "His age is:"
+        age = "Age:"
         age_2 =  Person_names_print[1]
 
         info = 'press "r" to restart'
